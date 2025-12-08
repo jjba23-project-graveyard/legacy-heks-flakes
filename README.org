@@ -1,3 +1,8 @@
-#+title: Hekserij Flakes
+#+title: heks-flakes
 
 Useful Nix flakes for several purposes and development environments
+
+- Scala
+- Haskell
+- Python (UV)
+- Rust
