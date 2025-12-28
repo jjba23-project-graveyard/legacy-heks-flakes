@@ -1,4 +1,5 @@
 #+title: heks-flakes
+#+options: toc:nil
 
 A collection of opinionated, reproducible *Nix Flakes* for instant development environments and build pipelines.
 
