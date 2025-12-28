@@ -9,11 +9,6 @@ A collection of opinionated, reproducible *Nix Flakes* for instant development e
 - Rust
 - more...
 
-This is a great start for a repository. Nix flakes are a game-changer for reproducibility, but they can be a bit opaque for newcomers.
-
-Here is an expanded version of your ~README.org~ that explains the "why" and "how" of Nix and Flakes, specifically tailored for developers.
-
-
 ** What is Nix?
 
 /Nix/ is a package manager and a build system that treats packages like pure functions.
