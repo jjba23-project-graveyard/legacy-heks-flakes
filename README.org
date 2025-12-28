@@ -54,5 +54,7 @@ You can also use direnv to integrate immediately on your shell or editor, with a
 You can update the ~flake.lock~ of the flakes.
 
 #+begin_src shell
-
+nix flake update
 #+end_src
+
+Or using [[https://codeberg.org/jjba23/maak][Maak, the infinitely extensible command runner]] for easier access.
