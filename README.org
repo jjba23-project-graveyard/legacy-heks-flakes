@@ -1,8 +1,62 @@
 #+title: heks-flakes
 
-Useful Nix flakes for several purposes and development environments
+A collection of opinionated, reproducible *Nix Flakes* for instant development environments and build pipelines.
 
 - Scala
 - Haskell
 - Python (UV)
 - Rust
+- more...
+
+This is a great start for a repository. Nix flakes are a game-changer for reproducibility, but they can be a bit opaque for newcomers.
+
+Here is an expanded version of your ~README.org~ that explains the "why" and "how" of Nix and Flakes, specifically tailored for developers.
+
+
+** What is Nix?
+
+/Nix/ is a package manager and a build system that treats packages like pure functions.
+
+Unlike traditional package managers (apt, brew, pip) that install files into global directories like =/usr/bin=, Nix stores every version of every package in a unique, isolated path in the *Nix Store* (=/nix/store/...=).
+
+--------------
+
+** Why use it?
+- *No “It works on my machine”*: If it builds on one machine, it builds on any Nix-enabled machine.
+- *Atomic updates & rollbacks*: Upgrading a package won't break your system.
+- *Declarative*: You describe your environment in a file, and Nix makes it a reality.
+
+--------------
+
+** What are Flakes?
+*Flakes* are the modern way to manage Nix projects. They provide a standardized structure for Nix code and, most importantly, a =flake.lock= file.
+
+*** Key Benefits of Flakes:
+
+- *Hermeticity*: Flakes cannot access files outside the project or  environment variables unless explicitly allowed.
+- *Reproducibility*: The =flake.lock= ensures that everyone on your  team uses the exact same version of dependencies (down to the Git hash).
+- *Easy Composition*: You can easily pull in this repository as an “input” to another project.
+
+--------------
+
+** Getting Started
+*** Enable Flakes
+Ensure you have Nix installed. To use flakes, you must enable them in your =nix.conf= (usually at =~/.config/nix/nix.conf= or =/etc/nix/nix.conf=):
+
+#+begin_src conf
+experimental-features = nix-command flakes
+#+end_src
+
+*** Using a Dev Shell
+The primary way to use these flakes is via =nix develop=. This drops you into a shell where all your tools (compilers, CLIs, libraries) are pre-installed.
+You can also use direnv to integrate immediately on your shell or editor, with a .envrc
+
+-------------
+
+** Updating the flakes
+
+You can update the ~flake.lock~ of the flakes.
+
+#+begin_src shell
+
+#+end_src
