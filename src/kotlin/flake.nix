@@ -33,6 +33,7 @@
             ktlint
             kotlin-language-server
             jdk21
+            gradle
             nil
           ];
         };
