@@ -32,7 +32,7 @@
             ktfmt
             ktlint
             kotlin-language-server
-            jdk17
+            jdk21
             gradle
             nil
           ];
